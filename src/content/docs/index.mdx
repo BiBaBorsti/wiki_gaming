@@ -1,0 +1,45 @@
+---
+title: Wiki
+description: Beschreibung
+#template: splash
+tableOfContents: false
+---
+import { LinkCard, CardGrid, Card, Icon, Code } from '@astrojs/starlight/components';
+import importedCode from '/src/env.d.ts?raw';
+
+<div class="text-xl font-bold text-red-500">i am tailwind styled text</div>
+
+
+<LinkCard
+  title="Git-Konsolenbefehle"
+  description="Learn how to make your Starlight site your own with custom styles, fonts, and more."
+  href="/guides/customization/"
+/>
+
+<CardGrid>
+  <LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
+  <LinkCard title="Components" href="/guides/components/" />
+</CardGrid>
+
+
+<Card title="Check this out">Interesting content you want to highlight.</Card>
+
+<CardGrid>
+  <Card title="Stars" icon="star">
+    Sirius, Vega, Betelgeuse
+  </Card>
+  <Card title="Moons" icon="moon">
+    Io, Europa, Ganymede
+  </Card>
+</CardGrid>
+
+<Icon name="twitch" color="#6441a5" size="2rem" />
+
+
+export const exampleCode = `console.log('This could come from a file or CMS!');`;
+export const fileName = 'example.js';
+export const highlights = ['file', 'CMS'];
+
+<Code code={exampleCode} lang="js" title={fileName} mark={highlights} />
+
+<Code code={importedCode} lang="ts" title="src/env.d.ts" />
