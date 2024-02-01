@@ -1,8 +1,11 @@
 ---
-title: React-Komponenten
+title: React - Überblick
 description: description
+sidebar:
+  label: Komponenten
+  order: 0
+tableOfContents: true
 ---
-
 React ist eine JavaScript-Bibliothek, die für den Aufbau von benutzerfreundlichen Benutzeroberflächen verwendet wird. Im Folgenden gibt es eine kleine Übersicht der wichtigsten Kernkomponenten, die später detaillierter erläutert werden.
 
 ## 1. **Komponenten**

@@ -1,10 +1,11 @@
 ---
-title: useState
+title: React - Hooks - useState
 description: description
+sidebar:
+  label: useState
+  order: 1
+tableOfContents: true
 ---
-
-# Der React Hook `useState` - "Speicher einer Komponente"
-
 In React wird `useState`, wie auch jede andere Funktion, die mit `use` beginnt, als Hook bezeichnet.<br/>
 
 Der `useState` Hook ist ein grundlegendes Konstrukt in React, das ermöglicht, den Zustand in funktionalen Komponenten zu verwalten. Es vereinfacht das Hinzufügen und Aktualisieren von Zuständen, was es zu einem essenziellen Werkzeug zur Erstellung dynamischer und interaktiver Benutzeroberflächen macht.

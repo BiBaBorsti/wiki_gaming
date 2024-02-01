@@ -1,9 +1,11 @@
 ---
 title: Git-Konsolenbefehle
 description: description
+sidebar:
+  label: Git-Konsolenbefehle
+  order: 0
+tableOfContents: true
 ---
-# Git-Konsolenbefehle
-
 ### Täglich nützliche Befehle
 
 - `git branch`: Listet alle lokalen Branches auf. Der aktuell verwendete Branch ist markiert.

@@ -2,7 +2,7 @@
 title: React Hooks
 description: description
 sidebar:
-  label: React Hooks - Übersicht
+  label: React Hooks
   order: 0
 ---
 

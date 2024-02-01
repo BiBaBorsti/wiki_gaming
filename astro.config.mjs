@@ -15,7 +15,7 @@ export default defineConfig({
       autogenerate: {
         directory: 'react',
           label: 'Hooks',
-          collapsed: true,
+          collapsed: false,
           autogenerate: {
             directory: 'Hooks'
           }
@@ -52,13 +52,13 @@ export default defineConfig({
       }
     }, {
       label: '101',
-      collapsed: true,
+      collapsed: false,
       autogenerate: {
         directory: '101'
       }
     }, {
       label: 'Apps',
-      collapsed: true,
+      collapsed: false,
       autogenerate: {
         directory: 'apps'
       }

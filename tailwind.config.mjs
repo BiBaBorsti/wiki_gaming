@@ -15,7 +15,8 @@ export default {
 		extend: {
 			// colors: { accent: colors.indigo, gray: colors.zinc },
 			// colors: { accent: colors.teal, gray: default_dark },
-			colors: { accent: default_light, gray: default_dark },
+			// colors: { accent: default_light, gray: default_dark },
+			colors: {  },
 		},
 	},
 	plugins: [starlightPlugin()],
