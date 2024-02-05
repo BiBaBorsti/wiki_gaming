@@ -7,60 +7,35 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: 'Wiki von Marcel Wolf',
+    title: 'G-Wiki',
+    editLink: {
+      baseUrl: 'https://github.com/BiBaBorsti/wiki_gaming/tree/main/',
+    },
+    social: {      
+      github: 'https://github.com/BiBaBorsti/wiki_gaming',
+    },
+    // logo: {
+    //   light: './src/assets/light-logo.svg',
+    //   dark: './src/assets/dark-logo.svg',
+    //   replacesTitle: true,
+    // },
     customCss: ['/src/tailwind.css'],
     sidebar: [{
-      label: 'React',
+      label: 'Title1',
       collapsed: false,
       autogenerate: {
-        directory: 'react',
-          label: 'Hooks',
+        directory: 'title1',
+          label: 'Subtitle1',
           collapsed: false,
           autogenerate: {
-            directory: 'Hooks'
+            directory: 'sub1'
           }
       }
     }, {
-      label: 'Laravel',
+      label: 'Title2',
       collapsed: false,
       autogenerate: {
-        directory: 'laravel'
-      }
-    }, {
-      label: 'VSCode',
-      collapsed: false,
-      autogenerate: {
-        directory: 'vscode'
-      }
-    }, {
-      label: 'Git & Github',
-      collapsed: false,
-      autogenerate: {
-        directory: 'git'
-      }
-    }, {
-      label: 'Mermaid',
-      collapsed: false,
-      autogenerate: {
-        directory: 'mermaid'
-      }
-    }, {
-      label: 'Linux',
-      collapsed: false,
-      autogenerate: {
-        directory: 'linux'
-      }
-    }, {
-      label: '101',
-      collapsed: false,
-      autogenerate: {
-        directory: '101'
-      }
-    }, {
-      label: 'Apps',
-      collapsed: false,
-      autogenerate: {
-        directory: 'apps'
+        directory: 'title2'
       }
     }]
   }), tailwind({
