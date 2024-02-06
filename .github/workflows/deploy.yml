@@ -33,7 +33,9 @@ jobs:
         npm run build
 
     - name: Create SSH key
-      run: echo "$GITHUB_PRIVATE_KEY" > ../github_do.key
+      run: |
+        echo "$GITHUB_PRIVATE_KEY" > ../github_do.key
+        chmod 600 ../github_do.key
       shell: bash
       env:
         GITHUB\_PRIVATE\_KEY: ${{ secrets.SSH_PRIVATE_KEY }} 
