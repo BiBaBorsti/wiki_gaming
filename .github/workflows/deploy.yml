@@ -47,4 +47,4 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh ${{ secrets.SSH_OPTIONS }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
+        ssh ${{ secrets.SSH_OPTIONS }} ${{ secrets.SSH_USER_HOST }} 'touch /opt/test/combined'
