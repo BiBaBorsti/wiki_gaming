@@ -13,6 +13,9 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
+      with:
+        node-version: 20.x
+        cache: 'npm'
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
@@ -27,6 +30,8 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
+        node-version: 20.x
+        cache: 'npm'
         name: dist
         path: ./dist
   
@@ -37,6 +42,8 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v3
       with:
+        node-version: 20.x
+        cache: 'npm'
         name: dist
         path: ./dist
 
@@ -48,4 +55,4 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
+        ssh -i ~/.ssh/id_rsa -o -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
