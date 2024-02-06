@@ -21,10 +21,10 @@ export default defineConfig({
     // },
     customCss: ['/src/tailwind.css'],
     sidebar: [{
-      label: 'Title1',
+      label: 'Disney Speedstorm',
       collapsed: false,
       autogenerate: {
-        directory: 'title1',
+        directory: 'speedstorm',
           label: 'Subtitle1',
           collapsed: false,
           autogenerate: {
@@ -32,12 +32,25 @@ export default defineConfig({
           }
       }
     }, {
-      label: 'Title2',
+      label: 'Snowrunner',
       collapsed: false,
       autogenerate: {
-        directory: 'title2'
+        directory: 'snowrunner'
       }
-    }]
+    }, {
+      label: 'Pioneers of Pagonia',
+      collapsed: false,
+      autogenerate: {
+        directory: 'pagonia'
+      }
+    }, {
+      label: 'Warframe',
+      collapsed: false,
+      autogenerate: {
+        directory: 'warframe'
+      }
+    }
+  ]
   }), tailwind({
     applyBaseStyles: false
   }), react({
