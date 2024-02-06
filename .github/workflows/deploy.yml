@@ -45,4 +45,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          rsync -avz --delete /dist/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/opt/test
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "touch /opt/test/test_file.txt"
