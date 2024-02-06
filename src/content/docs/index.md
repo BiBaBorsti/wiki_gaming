@@ -4,4 +4,4 @@ description: Beschreibung
 #template: splash
 tableOfContents: false
 ---
-### Hier gibt es News und Nützliche Inhalte zu unseren Games :-)
+![Truck on the Road](../../assets/title.png)
