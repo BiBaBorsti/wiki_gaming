@@ -45,7 +45,6 @@ jobs:
         ssh-keyscan -H ${{ secrets.SSH_SERVER_IP }} >> ~/.ssh/known_hosts
         chmod 600 ~/.ssh/known_hosts
 
-    - name: TestScript
+    - name: Deploy
       run: |
-        ssh ${{ secrets.SSH_OPTIONS }} ${{ secrets.SSH_USER_HOST }} 'touch /opt/test/final'
-        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/test/test/
+        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/wiki_gaming/dist/
