@@ -13,7 +13,11 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
     - name: Install Node.js and npm
       run: |
         sudo apt update
