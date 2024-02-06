@@ -7,7 +7,7 @@ sidebar:
   badge:
     text: NEW
     variant: tip
-tableOfContents:  
+tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
 ---
@@ -15,7 +15,7 @@ tableOfContents:
 
 Disney Speedstorm Saison 6, "Unter dem Meer", inspiriert vom Zeichentrickklassiker Disneys Die kleine Meerjungfrau, nähert sich mit großen Schritten! Das Team hat hart daran gearbeitet, das Spielerlebnis auf der Grundlage des Feedbacks der Community zu verbessern, und wir sind hier, um sie mit euch zu teilen!
 
-#### TELEPORT SKILL
+### TELEPORT SKILL
 
 - Die Dauer der Teleportation, die durch die Teleport-Fähigkeit gewährt wird, wurde reduziert und ist nun einheitlich. Sie wird nicht mehr auf der Grundlage der Entfernung des Spielers vom Racer an erster Stelle berechnet. 
 - Die Spur, die ein Racer beim Teleportieren hinterlässt, ist nun länger und bleibt länger bestehen, um anderen Spielern deutlicher zu machen, dass jemand teleportiert hat.
