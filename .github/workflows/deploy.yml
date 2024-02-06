@@ -55,4 +55,4 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh -i ~/.ssh/id_rsa -o -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
+        ssh -i ~/.ssh/id_rsa -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
