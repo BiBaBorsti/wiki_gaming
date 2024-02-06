@@ -32,6 +32,12 @@ jobs:
         npm install
         npm run build
 
+    - name: Create SSH key
+      run: echo "$GITHUB_PRIVATE_KEY" > ../github_do.key
+      shell: bash
+      env:
+        GITHUB\_PRIVATE\_KEY: ${{ secrets.SSH_PRIVATE_KEY }} 
+
     - name: TestScript
       run: |
-        ssh -i <(echo "${{ secrets.SSH_PRIVATE_KEY }}") -o StrictHostKeyChecking=no -p 22 root@212.132.68.12 'touch /opt/test/helloworld.txt'
+        ssh -i ../github_do.key -o StrictHostKeyChecking=no -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
