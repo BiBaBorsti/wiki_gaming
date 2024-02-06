@@ -8,6 +8,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [starlight({
     title: 'Gaming-Wiki',
+    logo: {
+      src: './src/assets/logo.svg',
+    },
     editLink: {
       baseUrl: 'https://github.com/BiBaBorsti/wiki_gaming/tree/main/',
     },
