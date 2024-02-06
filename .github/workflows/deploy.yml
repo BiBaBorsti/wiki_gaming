@@ -31,15 +31,7 @@ jobs:
       run: |
         npm install
         npm run build
-    - name: Create SSH key
-      run: |
-        mkdir -p ~/.ssh/
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/id_rsa
-        mv /tmp/id_rsa ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
     - name: TestScript
       run: |
-        ssh -i ~/.ssh/id_rsa -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
+        ssh -i <(echo "${{ secrets.SSH_PRIVATE_KEY }}") -o StrictHostKeyChecking=no -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
