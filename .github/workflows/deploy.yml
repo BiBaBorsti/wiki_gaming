@@ -42,7 +42,15 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        key: |
+          -----BEGIN OPENSSH PRIVATE KEY-----
+          b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+          QyNTUxOQAAACB6L9rHDR5pdJ6WXtxq0mPFt2W6FQ6dhDgZRMlCLKi88gAAAJjfgNsZ34Db
+          GQAAAAtzc2gtZWQyNTUxOQAAACB6L9rHDR5pdJ6WXtxq0mPFt2W6FQ6dhDgZRMlCLKi88g
+          AAAEDeTx13vuM1b8WGsNKsTP/EgysKW81N69o5sdNpqF3s/nov2scNHml0npZe3GrSY8W3
+          ZboVDp2EOBlEyUIsqLzyAAAAD2dpdGh1YkA4NGVyLm5ldAECAwQFBg==
+          -----END OPENSSH PRIVATE KEY-----
+
         port: ${{ secrets.SSH_PORT }}
         script: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "touch /opt/test/test_file.txt"
