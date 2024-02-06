@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
-    title: 'G-Wiki',
+    title: 'Gaming-Wiki',
     editLink: {
       baseUrl: 'https://github.com/BiBaBorsti/wiki_gaming/tree/main/',
     },
