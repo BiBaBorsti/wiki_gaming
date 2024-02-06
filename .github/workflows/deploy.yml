@@ -47,5 +47,4 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh -i ~/.ssh/id_rsa -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
-        rsync -ave "ssh -i ~/.ssh/id_rsa -p 22" --delete dist/ ${{ secrets.SSH_HOST }}:/opt/test/dist/
+        ssh -i ~/.ssh/id_rsa -p 22 -vvv ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
