@@ -11,7 +11,7 @@ tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
 ---
-### Updates für Teleport-Fähigkeit, Trickster-Racer-Klasse, Racer-Balancing und mehr!
+<h3 class="text-gray-900">Updates für Teleport-Fähigkeit, Trickster-Racer-Klasse, Racer-Balancing und mehr!</h3>
 
 Disney Speedstorm Saison 6, "Unter dem Meer", inspiriert vom Zeichentrickklassiker Disneys Die kleine Meerjungfrau, nähert sich mit großen Schritten! Das Team hat hart daran gearbeitet, das Spielerlebnis auf der Grundlage des Feedbacks der Community zu verbessern, und wir sind hier, um sie mit euch zu teilen!
 
