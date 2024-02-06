@@ -35,7 +35,7 @@ jobs:
       run: |
         install -m 600 -D /dev/null ~/.ssh/id_rsa
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+        echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHov2scNHml0npZe3GrSY8W3ZboVDp2EOBlEyUIsqLzy github@84er.net" > ~/.ssh/known_hosts
 
     - name: Transfer Built Files to Server
       uses: appleboy/ssh-action@master
