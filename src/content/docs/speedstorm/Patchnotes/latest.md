@@ -6,7 +6,7 @@ sidebar:
   order: 0
   badge:
     text: NEW
-    variant: tip
+    variant: caution
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
