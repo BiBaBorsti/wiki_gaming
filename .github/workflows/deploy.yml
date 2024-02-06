@@ -31,14 +31,12 @@ jobs:
       run: |
         npm install
         npm run build
+    - name: Create SSH key
+      run: |
+        install -m 600 -D /dev/null ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
-    - name: Transfer Built Files to Server
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: mdzmdz84
-        port: ${{ secrets.SSH_PORT }}
-        script: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} -p ${{ secrets.SSH_PORT }} "touch /opt/test/test_file.txt"
+    - name: Deploy
+      run: |
+        ssh -i ~/.ssh/id_rsa -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
