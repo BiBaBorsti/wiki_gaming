@@ -34,4 +34,4 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh -i <(echo "${{ secrets.SSH_PRIVATE_KEY }}") -o StrictHostKeyChecking=no -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
+        ssh -i <(echo "${{ secrets.SSH_PRIVATE_KEY }}") -o StrictHostKeyChecking=no -p 22 root@212.132.68.12 'touch /opt/test/helloworld.txt'
