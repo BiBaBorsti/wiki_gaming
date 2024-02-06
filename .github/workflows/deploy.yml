@@ -1,0 +1,39 @@
+name: build
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install Node.js and npm
+      run: |
+        sudo apt update
+        sudo apt install nodejs
+        sudo apt install npm
+
+    - name: Navigate to Project Directory
+      run: cd path/to/your/project
+
+    - name: Install Dependencies and Build
+      run: |
+        npm install
+        npm run build
+
+    - name: Transfer Built Files to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          rsync -avz --delete /dist/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/opt/test
