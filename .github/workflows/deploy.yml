@@ -25,7 +25,7 @@ jobs:
         sudo apt install npm
 
     - name: Navigate to Project Directory
-      run: cd ../
+      run: cd ./
 
     - name: Install Dependencies and Build
       run: |
@@ -34,8 +34,8 @@ jobs:
 
     - name: set chmod id_rsa
       run: |
-        chmod 600 ../test/id_rsa
+        chmod 600 ./test/id_rsa
 
     - name: TestScript
       run: |
-        ssh -i ../test/id_rsa -o StrictHostKeyChecking=no -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
+        ssh -i ./test/id_rsa -o StrictHostKeyChecking=no -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'touch /opt/test/helloworld.txt'
