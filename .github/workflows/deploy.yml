@@ -34,4 +34,5 @@ jobs:
 
     - name: TestScript
       run: |
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        ssh -i ~/.ssh/id_rsa -p 22 webmaster@212.132.68.12 'touch /opt/test/helloworld.txt'
