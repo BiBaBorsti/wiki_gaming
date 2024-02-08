@@ -3,3 +3,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+img[alt="dripic"] {
+    max-width: 250px;
+    float: left;
+    padding-right: 30px;
+}
+
+img[alt="profil"] {
+    height: 135px;
+    width: auto;
+    object-fit: contain;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+img[alt="unique"] {
+    max-width: 350px;
+    float: left;
+    padding-right: 30px;
+}
+
+img[alt="star"] {
+    max-width: 20px;
+    margin-right: 2px;
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--sl-color-text-accent); */
+}

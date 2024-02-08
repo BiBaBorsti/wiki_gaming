@@ -23,16 +23,11 @@ export default defineConfig({
     //   replacesTitle: true,
     // },
     customCss: ['/src/tailwind.css'],
-    sidebar: [{
+    sidebar: [ {
       label: 'Disney Speedstorm',
       collapsed: false,
       autogenerate: {
         directory: 'speedstorm',
-          label: 'Subtitle1',
-          collapsed: false,
-          autogenerate: {
-            directory: 'sub1'
-          }
       }
     }, {
       label: 'Snowrunner',
