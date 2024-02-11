@@ -42,6 +42,12 @@ export default defineConfig({
         directory: 'pagonia'
       }
     }, {
+      label: 'Minecraft',
+      collapsed: false,
+      autogenerate: {
+        directory: 'minecraft'
+      }
+    }, {
       label: 'Warframe',
       collapsed: false,
       autogenerate: {
