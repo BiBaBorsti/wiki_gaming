@@ -4,7 +4,7 @@ description: description
 sidebar:
   label: Season 6 (02/24)
   order: 0
-  badge: false
+  # badge:
   #   text: new
   #   variant: caution
 tableOfContents:
