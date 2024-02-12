@@ -41,13 +41,13 @@ jobs:
       run: |
         install -m 600 -D /dev/null ~/.ssh/id_rsa
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        # ssh-keyscan -H ${{ secrets.SSH_SERVER_NAME }} >> ~/.ssh/known_hosts
+        ssh-keyscan -H ${{ secrets.SSH_SERVER_NAME }} >> ~/.ssh/known_hosts
         ssh-keyscan -H ${{ secrets.SSH_SERVER_NAME_NEW }} >> ~/.ssh/known_hosts
-        # ssh-keyscan -H ${{ secrets.SSH_SERVER_IP }} >> ~/.ssh/known_hosts
+        ssh-keyscan -H ${{ secrets.SSH_SERVER_IP }} >> ~/.ssh/known_hosts
         ssh-keyscan -H ${{ secrets.SSH_SERVER_IP_NEW }} >> ~/.ssh/known_hosts
         chmod 600 ~/.ssh/known_hosts
 
     - name: Deploy
       run: |        
         rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST_NEW }}:/mnt/web309/e1/13/58750013/htdocs/test/dist/
-        # rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/wiki_gaming/dist/
+        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/wiki_gaming/dist/
