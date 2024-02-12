@@ -49,5 +49,5 @@ jobs:
 
     - name: Deploy
       run: |        
-        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST_NEW }}:/mnt/web309/e1/13/58750013/htdocs/wiki_gaming/
+        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST_NEW }}:/mnt/web309/e1/13/58750013/htdocs/websites/wiki_gaming/
         rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/wiki_gaming/dist/
