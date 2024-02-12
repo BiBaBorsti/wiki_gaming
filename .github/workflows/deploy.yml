@@ -48,3 +48,4 @@ jobs:
     - name: Deploy
       run: |
         rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ ${{ secrets.SSH_USER_HOST }}:/opt/wiki_gaming/dist/
+        rsync -ave "ssh ${{ secrets.SSH_OPTIONS }}" --delete dist/ 84er.net@ssh.strato.de:/mnt/web309/e1/13/58750013/htdocs/wiki_gaming/
