@@ -4,9 +4,9 @@ description: description
 sidebar:
   label: Season 6 (02/24)
   order: 0
-  badge:
-    text: new
-    variant: caution
+  badge: false
+  #   text: new
+  #   variant: caution
 tableOfContents:
   minHeadingLevel: 2
   maxHeadingLevel: 4
